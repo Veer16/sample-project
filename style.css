@@ -9,13 +9,31 @@ body {
     color: #fff;
 }
 
+nav ul {
+    display: flex;
+    height: 7vh;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    margin-right: 30px;
+    color: black;
+    scroll-behavior: smooth;
+}
+
+nav ul li {
+    font-size: 1.5rem;
+}
+
 .parallex-effect {
     background-image: url(img/bgimg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     height: 600px;
 }
 
@@ -23,7 +41,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -80%);
     text-align: center;
 
 }
@@ -37,7 +55,6 @@ body {
     text-align: center;
     color: black;
     padding: 2rem 1rem;
-
 }
 
 #projects h1 {
@@ -68,7 +85,6 @@ body {
     font-size: 1.2rem;
     padding: 1rem 0.5rem;
     color: black;
-
 }
 
 .project:hover .code {
@@ -80,14 +96,12 @@ body {
 }
 
 .project {
-
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 
 .project:hover {
     box-shadow: 5px 5px 10px black, -5px -5px 10px black;
-    ;
 }
 
 .btn {
@@ -103,6 +117,7 @@ body {
     display: block;
     cursor: pointer;
     margin-bottom: 3rem;
+    border: 2px solid #81cfb2;
 }
 
 .btn:hover {
@@ -146,4 +161,21 @@ a {
     color: #fff;
     font-size: 1.2rem;
     margin-right: 20px;
+}
+
+@media only screen and (max-width: 650px) {
+    nav ul {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .intro {
+        top: 30%;
+        left: 50%;
+    }
+
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+    }
 }
